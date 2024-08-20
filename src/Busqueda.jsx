@@ -40,18 +40,17 @@ class Busqueda extends Component {
 
   render() {
     return (
-      <header>
-        <div>
-          <span></span>
+      <>
+        <div className="container-busqueda">
           <input
+            className="inputBuscar"
             name="buscar"
             placeholder="Buscar por nombre"
             onChange={this.Busqueda}
           />
-          <img src="/img/busqueda.png" alt="busqueda" />
+          <img className="imgbuscar" src="/img/busqueda.png" alt="busqueda" />
         </div>
-        {this.renderLista()}
-      </header>
+      </>
     );
   }
 }
