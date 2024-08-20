@@ -1,17 +1,17 @@
-import Productos from "./Productos";
+function Cuerpo({ props = [] }) {
+  const producto = props.map((x, index) => (
+    <article className="Producto" key={index}>
+      <img className="imgProducto" src={x.imagen} alt={x.nombre} />
+      <strong>{x.nombre}</strong>
+      <hr />
+      <p className="descripcion">{x.descripcion}</p>
+      <span className="precio">{x.precio}</span>
+    </article>
+  ));
 
-const card = Productos.map((elemento, index) => (
-  <article className="Producto">
-    <img className="imgProducto" src={elemento.imagen} alt={elemento.nombre} key={index} />
-    <strong>{elemento.nombre}</strong>
-    <hr/>
-    <p className="descripcion">{elemento.descripcion}</p>
-    <span className="precio">{elemento.precio}</span>
-  </article>
-));
-
-function Cuerpo() {
-  return <main className="main">{card}</main>;
+  return <main className="main">
+    {producto}
+    </main>;
 }
 
 export default Cuerpo;

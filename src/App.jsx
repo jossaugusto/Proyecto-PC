@@ -1,18 +1,19 @@
-import './App.css'
-import Cuerpo from './Cuerpo'
-import Pie from './Pie'
-import Header from './Header'
+import "./App.css";
+import Pie from "./Pie";
+import './Pie.css'
 
-
+import './Menu.css'
+import './Cuerpo.css'
+import './Header.css'
+import Header from "./Header";
 
 function App() {
   return (
-    <div className='container'>
-      <Header/>
-      <Cuerpo/>
-      <Pie/>
+    <div className="container">
+      <Header />
+      <Pie />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,51 @@
+.ancor-pie {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+  transition: all 0.5s;
+
+  &:hover {
+    color: blueviolet;
+    text-decoration: underline;
+  }
+}
+
+.enlace-redes {
+  text-align: center;
+  transition: all 1.5s;
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+.cont-enlaces {
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+  }
+
+  .tit-enlaces {
+    font-size: 1.5rem;
+    cursor: default;
+    color: white;
+  }
+
+  .footer {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: black;
+  }
+
+  .img-rd {
+    width: 60%;
+  }
+
+  .container-rd {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+  }

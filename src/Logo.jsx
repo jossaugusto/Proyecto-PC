@@ -1,6 +1,6 @@
 function Logo() {    
   return (
-    <a className="titulo" href="/">
+    <a className="logo" href="/">
       INNOV8
     </a>
     
