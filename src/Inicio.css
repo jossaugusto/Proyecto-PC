@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  cursor: default;
+  font-size: 10rem;
+  text-decoration: underline;
+}
+
+.main-inicio {
+  background-image: url("/public/img/fondo-inicio.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-inicio {
+  width: 70%;
+  height: 70%;
+  background-color: rgba(0, 0, 0, 0.162);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+}
+
+.dia {
+  font-size: 4rem;
+  align-self: flex-start;
+  cursor: default;
+  color: whitesmoke;
+  font-style: italic;
+}
+
+.textoDia {
+  align-self: flex-start;
+  font-size: 3rem;
+  text-wrap: pretty;
+  width: 80%;
+  cursor: default;
+  color: antiquewhite;
+  font-style: oblique;
+}
+
+.button-inicio {
+    font-size: 1.5rem;
+    width: fit-content;
+  color: blue;
+  font-weight: bold;
+  align-self: flex-end;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  transition: background-color 1s;
+  &:hover {
+    color: whitesmoke;
+    background-color: blue;
+    cursor: pointer;
+  }
+}
