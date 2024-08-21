@@ -1,6 +1,6 @@
 const Enlaces = [
-  { name: "Tarjetas Gráficas", url: "/" },
-  { name: "Laptop", url: "/" },
+  { name: "Inicio", url: "#inicio" },
+  { name: "Consultas", url: "#formulario" },
   { name: "Monitores G-SYNC", url: "/" },
   { name: "Gaming en la nube", url: "/" },
 ];

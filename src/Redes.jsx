@@ -6,9 +6,9 @@ const redes = [
 ];
 
 const rd = redes.map((elemento, index) => (
-  <a className="enlace-redes" href={elemento.url} target="blank"><img className="img-rd" src={elemento.src
+  <a key={index} className="enlace-redes" href={elemento.url} target="blank"><img className="img-rd" src={elemento.src
 
-  } alt={elemento.src} key={index} /></a>
+  } alt={elemento.src}  /></a>
 ));
 
 function Redes() {

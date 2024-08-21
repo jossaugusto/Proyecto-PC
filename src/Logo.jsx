@@ -1,8 +1,8 @@
 function Logo() {    
   return (
-    <a className="logo" href="/">
+    <h1 className="logo" href="/">
       INNOV8
-    </a>
+    </h1>
     
   );
 }

@@ -1,24 +1,18 @@
 import "./App.css";
-import Pie from "./Pie";
+import "./Formulario.css";
 import "./Pie.css";
-import './Inicio.css'
-import "./Menu.css";
-import "./Cuerpo.css";
-import "./Header.css";
-import Header from "./Header";
-
 import Inicio from "./Inicio";
+import EquiposT from "./EquiposT";
+import Formulario from "./Formulario";
 
 function App() {
   return (
-    <div className="container">
-      {/* <Header />
-      <Pie /> */}
-      <Inicio/>
+    <div className="containerPag">
+      <Inicio />
+      <EquiposT />
+      <Formulario />
     </div>
   );
 }
 
 export default App;
-
-

@@ -18,24 +18,27 @@ let f = new Date();
 let dia = infoDia[f.getDay()];
 
 function Inicio() {
-  const [tamaño, setTamaño] = useState(1);
+  const [opacity, setOpacity] = useState(1);
 
   const cambiar = () => {
-    setTamaño(0);
+    setOpacity(0);
+
+    setTimeout(() => {
+      setOpacity(1);
+    }, 2000);
   };
   return (
-    <main className="main-inicio">
-        {/* <img src="/img/fondo-inicio.jpg" alt="fondo de la página de inicio" /> */}
+    <main className="main-inicio" id="inicio">
       <div
-        className="container-inicio"
-        style={{ opacity: `${tamaño}`, transition: "opacity 1s" }}
+        className="contenido-inicio"
+        style={{ opacity: `${opacity}`, transition: "opacity 1s" }}
       >
         <Logo />
         <h2 className="dia">Hoy {dia.dia}</h2>
         <p className="textoDia">{dia.textoDia}</p>
-        <button className="button-inicio" type="button" onClick={cambiar}>
+        <a href="#productos" className="button-inicio" type="button" onClick={cambiar}>
           Ir a Productos
-        </button>
+        </a>
       </div>
     </main>
   );

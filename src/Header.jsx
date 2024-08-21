@@ -2,7 +2,7 @@ import { useState } from "react";
 import Productos from "./Productos";
 import Logo from "./Logo";
 import Cuerpo from "./Cuerpo";
-import MenuLateral from "./MenuLateral";
+import { IoSearchCircleSharp } from "react-icons/io5";
 
 function Header() {
   const [buscar, setBuscar] = useState("");
@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <>
-      <header className="header">
+      <header className="header" id="productos">
         <Logo />
         <div className="container-busqueda">
           <input
@@ -25,11 +25,10 @@ function Header() {
             value={buscar}
             onChange={filtrado}
           />
-          <img className="imgbuscar" src="/img/busqueda.png" alt="busqueda" />
+          <IoSearchCircleSharp className="icon-lupa" />
         </div>
       </header>
       <>
-        <MenuLateral />
         <Cuerpo props={filtrarProductos} />
       </>
     </>
