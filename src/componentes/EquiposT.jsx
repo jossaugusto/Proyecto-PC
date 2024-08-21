@@ -1,5 +1,5 @@
-import Header from "./Header";
-import Pie from "./Pie";
+import Header from "../Header";
+import Pie from "../Pie";
 
 function EquiposT() {
   return (
