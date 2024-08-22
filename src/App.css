@@ -4,38 +4,39 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   scroll-behavior: smooth;
+ 
 }
 
+
 .containerPag {
-  
+  background-image: url("./img/fondo4.jpeg");
+   background-size: 100% 15%;
+   object-fit: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
+  
 }
 
 /*Carrito*/
-.icon-cart {
+.icono-carrito {
 	width: 40px;
 	height: 40px;
 	stroke: #000;
 }
 
-.icon-cart:hover {
+.icono-carrito:hover {
 	cursor: pointer;
 }
 
-.container-icon {
-	position: relative;
-}
 
-.count-products {
+.container-contador{
 	position: absolute;
-	top: 55%;
-	right: 0;
+	right: 0; 
 
-	background-color: #000;
-	color: #fff;
+	background-color:white;
+	color: black;
 	width: 25px;
 	height: 25px;
 
@@ -46,10 +47,10 @@
 }
 
 .contador-productos {
-	font-size: 12px;
+	font-size: 15px;
 }
 
-.container-cart-products {
+.container-carrito {
 	position: absolute;
 	top: 50px;
 	right: 0;
@@ -61,7 +62,7 @@
 	border-radius: 10px;
 }
 
-.cart-product {
+.carrito-productos {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -70,8 +71,8 @@
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.info-cart-product {
-	display: flex;
+.info-carrito{
+	display: flex;  
 	justify-content: space-between;
 	flex: 0.8;
 }
@@ -87,22 +88,25 @@
 	margin-left: 10px;
 }
 
+
 .cantidad-producto-carrito {
 	font-weight: 400;
 	font-size: 20px;
 }
 
-.icon-close {
+.borrar-producto {
 	width: 25px;
 	height: 25px;
 }
-
-.icon-close:hover {
+.contenedor-icono{
+  position: relative;
+}
+.borrar-producto:hover {
 	stroke: red;
 	cursor: pointer;
 }
 
-.cart-total {
+.carrito-total{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -110,7 +114,7 @@
 	gap: 20px;
 }
 
-.cart-total h3 {
+.carrito-total h3 {
 	font-size: 20px;
 	font-weight: 700;
 }
@@ -120,11 +124,11 @@
 	font-weight: 900;
 }
 
-.hidden-cart {
+.ocultar-carrito {
 	display: none;
 }
 
-.cart-empty {
+.carrito-vacio {
 	padding: 20px;
 	text-align: center;
 }
@@ -133,7 +137,7 @@
 	display: none;
 }
 
-.btn-clear-all {
+.boton-limpiar {
 	border: none;
 	background-color: #000;
 	color: #fff;
@@ -149,7 +153,7 @@
   transition: all .3s ease;
 }
 
-.btn-clear-all:hover{
+.boton-limpiar:hover{
   background-color: #333;
   transform: scale(1.03);
   border-radius: 0;

@@ -9,7 +9,7 @@ function App() {
       <Inicio />
       <Login/>
       <EquiposT />
-    </div>
+    </div>  
   );
 }
 

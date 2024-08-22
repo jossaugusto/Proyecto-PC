@@ -2,44 +2,45 @@ import { FaShoppingCart } from "react-icons/fa";
 import { useState } from "react";
 
 export const Carrito = ({
-  allProducts,
-  setAllProducts,
+  verProductos,
+  setVerProductos,
+  conteoProductos,
+  setConteoProductos,
   total,
-  countProducts,
-  setCountProducts,
   setTotal,
+
 }) => {
   const [active, setActive] = useState(false);
 
   const onDeleteProduct = (product) => {
-    const results = allProducts.filter((item) => item.id !== product.id);
+    const results = verProductos.filter((item) => item.id !== product.id);
     setTotal(total - product.precio * product.cantidad);
-    setCountProducts(countProducts - product.cantidad);
-    setAllProducts(results);
+    setConteoProductos(conteoProductos - product.cantidad);
+    setVerProductos(results);
   };
 
   const onCleanCart = () => {
-    setAllProducts([]);
+    setVerProductos([]);
     setTotal(0);
-    setCountProducts(0);
+    setConteoProductos(0);
   };
 
   return (
-    <div className="container-icon">
-      <div className="container-cart-icon" onClick={() => setActive(!active)}>
-        <div className="count-products">
-          <span className="contador-productos">{countProducts}</span>
+    <div className="contenedor-icono">
+      <div onClick={() => setActive(!active)}>
+        <div className="container-contador">
+          <span className="contador-productos">{conteoProductos}</span>
         </div>
-        <FaShoppingCart className="icon-cart" />
+        <FaShoppingCart className="icono-carrito" />
       </div>
 
-      <div className={`container-cart-products ${active ? "" : "hidden-cart"}`}>
-        {allProducts.length ? (
+      <div className={`container-carrito ${active ? "" : "ocultar-carrito"}`}>
+        {verProductos.length ? (
           <>
-            <div className="row-product">
-              {allProducts.map((product) => (
-                <div className="cart-product" key={product.id}>
-                  <div className="info-cart-product">
+            <section >
+              {verProductos.map((product) => (
+                <div className="carrito-productos" key={product.id}>
+                  <div className="info-carrito">
                     <span className="cantidad-producto-carrito">
                       {product.cantidad}
                     </span>
@@ -54,7 +55,7 @@ export const Carrito = ({
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    className="icon-close"
+                    className="borrar-producto"
                     onClick={() => onDeleteProduct(product)}
                   >
                     <path
@@ -65,19 +66,19 @@ export const Carrito = ({
                   </svg>
                 </div>
               ))}
-            </div>
+            </section>
 
-            <div className="cart-total">
+            <div className="carrito-total">
               <h3>Total:</h3>
               <span className="total-pagar">${total}</span>
             </div>
 
-            <button className="btn-clear-all" onClick={onCleanCart}>
+            <button className="boton-limpiar" onClick={onCleanCart}>
               Vaciar Carrito
             </button>
           </>
         ) : (
-          <p className="cart-empty">El carrito está vacío</p>
+          <p className="carrito-vacio">El carrito está vacío</p>
         )}
       </div>
     </div>

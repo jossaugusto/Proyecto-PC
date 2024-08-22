@@ -7,9 +7,9 @@ import { Carrito } from "./Carrito";
 
 
 function Header() {
-  const [allProducts, setAllProducts] = useState([]);
+  const [verProductos, setVerProductos] = useState([]);
   const [total, setTotal] = useState(0);
-  const [countProducts, setCountProducts] = useState(0);
+  const [conteoProductos, setConteoProductos] = useState(0);
 
   const [buscar, setBuscar] = useState("");
 
@@ -34,23 +34,23 @@ function Header() {
           <IoSearchCircleSharp className="icon-lupa" />
         </div>
         <Carrito
-          allProducts={allProducts}
-          setAllProducts={setAllProducts}
+          verProductos={verProductos}
+          setVerProductos={setVerProductos}
           total={total}
           setTotal={setTotal}
-          countProducts={countProducts}
-          setCountProducts={setCountProducts}
+          conteoProductos={conteoProductos}
+          setConteoProductos={setConteoProductos}
         />
       </header>
       <>
         <Cuerpo
           productos={filtrarProductos}
-          allProducts={allProducts}
-          setAllProducts={setAllProducts}
+          verProductos={verProductos}
+          setVerProductos={setVerProductos}
           total={total}
           setTotal={setTotal}
-          countProducts={countProducts}
-          setCountProducts={setCountProducts}
+          conteoProductos={conteoProductos}
+          setConteoProductos={setConteoProductos}
         />
       </>
     </>

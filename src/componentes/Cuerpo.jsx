@@ -1,26 +1,26 @@
 function Cuerpo({
   productos = [],
-  allProducts,
-  setAllProducts,
-  countProducts,
-  setCountProducts,
+  verProductos,
+  setVerProductos,
+  conteoProductos,
+  setConteoProductos,
   total,
   setTotal,
 }) {
   const onAddProducts = (product) => {
-    const productoExistente = allProducts.find(
+    const productoExistente = verProductos.find(
       (item) => item.id === product.id);
 
     if (productoExistente) {
-      const productsActualizado = allProducts.map((item) =>
+      const productsActualizado = verProductos.map((item) =>
         item.id === product.id ? { ...item, cantidad: item.cantidad + 1 } : item
       );
-      setAllProducts(productsActualizado);
+      setVerProductos(productsActualizado);
     } else {
-      setAllProducts([...allProducts, { ...product, cantidad: 1 }]);
+      setVerProductos([...verProductos, { ...product, cantidad: 1 }]);
     }
     setTotal(total + product.precio);
-    setCountProducts(countProducts + 1);
+    setConteoProductos(conteoProductos + 1);
   };
 
   const MostrarProductos = productos.map((producto) => (
