@@ -1,17 +1,46 @@
-function Cuerpo({ props = [] }) {
-  const producto = props.map((x, index) => (
-    <article className="container-producto" key={index}>
-      <img className="imgProducto" src={x.imagen} alt={x.nombre} />
-      <strong>{x.nombre}</strong>
+function Cuerpo({
+  productos = [],
+  allProducts,
+  setAllProducts,
+  countProducts,
+  setCountProducts,
+  total,
+  setTotal,
+}) {
+  const onAddProducts = (product) => {
+    const productoExistente = allProducts.find(
+      (item) => item.id === product.id);
+
+    if (productoExistente) {
+      const productsActualizado = allProducts.map((item) =>
+        item.id === product.id ? { ...item, cantidad: item.cantidad + 1 } : item
+      );
+      setAllProducts(productsActualizado);
+    } else {
+      setAllProducts([...allProducts, { ...product, cantidad: 1 }]);
+    }
+    setTotal(total + product.precio);
+    setCountProducts(countProducts + 1);
+  };
+
+  const MostrarProductos = productos.map((producto) => (
+    <article className="container-producto" key={producto.id}>
+      <img
+        className="imgProducto"
+        src={producto.imagen}
+        alt={producto.nombre}
+      />
+      <strong>{producto.nombre}</strong>
       <hr />
-      <p className="descripcion-productos">{x.descripcion}</p>
-      <span className="precio-productos">{x.precio}</span>
+      <p className="descripcion-productos">{producto.descripcion}</p>
+      <div className="precio-añadir">
+      <span className="precio-productos">${producto.precio}.00</span>
+      <button className="añadir" onClick={() => onAddProducts(producto)}>Añadir al carrito</button>
+      </div>
     </article>
   ));
 
-  return <main className="main-productos">
-    {producto}
-    </main>;
+  return <main className="main-productos">{MostrarProductos}</main>;
 }
 
 export default Cuerpo;
