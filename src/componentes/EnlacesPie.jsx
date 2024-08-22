@@ -1,11 +1,10 @@
 const Enlaces = [
   { name: "Inicio", url: "#inicio" },
-  { name: "Consultas", url: "#formulario" },
-  { name: "Monitores G-SYNC", url: "/" },
-  { name: "Gaming en la nube", url: "/" },
+  { name: "Iniciar Sesion", url: "#login" },
+  { name: "Productos", url: "#productos" },
 ];
 
-const tituloPie = "Productos";
+const tituloPie = "INNOV8";
 const ancor = Enlaces.map((x,index) => <a key={index} className="ancor-pie" href={x.url}>{x.name}</a>);
 
 function EnlacesPie() {

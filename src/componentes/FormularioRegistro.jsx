@@ -36,29 +36,33 @@ function FormularioRegistro() {
         alert("Bienvenido");
         setRegistrado(true);
     };
-        if (registrado) {
-            return <Login />;
-        }
+    if (registrado) {
+        return <Login />;
+    }
 
     return (
-        <form onSubmit={handleSubmit}>
-            {[
-                { label: "Usuario", type: "text", id: "iusuario", name: "usuario", placeholder: "Ingrese Usuario" },
-                { label: "Contraseña", type: "password", id: "icontraseña", name: "contraseña", placeholder: "Ingrese Contraseña" },
-                { label: "Repita Contraseña", type: "password", id: "icontraseñaV", name: "contraseñaV", placeholder: "Repita Contraseña" },
-                { label: "Correo Electrónico", type: "email", id: "icorreo", name: "correo", placeholder: "Ingrese Correo Electrónico" }
-            ].map(({ label, ...inputProps }, index) => (
-                <div key={index}>   
-                    <label htmlFor={inputProps.id}>{label}</label>
-                    <input {...inputProps} />
+            <form onSubmit={handleSubmit} className="formulario">
+                {[
+                    { label: "Usuario:", type: "text", id: "iusuario", name: "usuario", placeholder: "Ingrese Usuario" },
+                    { label: "Contraseña:", type: "password", id: "icontraseña", name: "contraseña", placeholder: "Ingrese Contraseña" },
+                    { label: "Repita Contraseña:", type: "password", id: "icontraseñaV", name: "contraseñaV", placeholder: "Repita Contraseña" },
+                    { label: "Correo Electrónico:", type: "email", id: "icorreo", name: "correo", placeholder: "Ingrese Correo Electrónico" }
+                ].map(({ label, ...inputProps }, index) => (
+
+                    <div key={index} className="contenedor-formulario">
+                        <label className="etiqueta" htmlFor={inputProps.id}>{label}</label>
+                        <input className="input"{...inputProps} />
+                    </div>
+
+                ))}
+
+                <div className="contenedor-formulario">
+
+                    <input className="checkbox" type="checkbox" id="itos" name="tos" />
+                    <label className="etiqueta" htmlFor="itos">¿Acepta los términos y condiciones del servicio?</label>
                 </div>
-            ))}
-            <div>
-                <input type="checkbox" id="itos" name="tos" />
-                <label htmlFor="itos">¿Acepta los términos y condiciones del servicio?</label>
-            </div>
-            <button type="submit">Registrar</button>
-        </form>
+                <button className="boton-ingresar" type="submit">Registrar</button>
+            </form>
     );
 }
 

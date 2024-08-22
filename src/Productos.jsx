@@ -176,7 +176,7 @@ const Productos = [
   {
     id:20,
     nombre: "Mouse Gamer Logitech G502 Hero",
-    precio: "PEN: 229.00",
+    precio: 229.00,
     categoria: "mouse",
     imagen: "/img/mouse/mouse3.jpg",
     descripcion:
@@ -185,7 +185,7 @@ const Productos = [
   {
     id:21,
     nombre: "Mouse Acer Nitro NMW120 Negro Y Rojo",
-    precio: "PEN: 69.00",
+    precio: 69.00,
     categoria: "mouse",
     imagen: "/img/mouse/mouse4.jpg",
     descripcion:

@@ -24,7 +24,7 @@ function Cuerpo({
   };
 
   const MostrarProductos = productos.map((producto) => (
-    <article className="container-producto" key={producto.id}>
+    <article className="container-producto" key={producto.id} id="productos">
       <img
         className="imgProducto"
         src={producto.imagen}

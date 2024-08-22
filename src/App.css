@@ -9,7 +9,7 @@
 
 
 .containerPag {
-  background-image: url("./img/fondo4.jpeg");
+     background-image: url("./img/fondo4.jpeg"); 
    background-size: 100% 15%;
    object-fit: cover;
   display: flex;
@@ -23,7 +23,6 @@
 .icono-carrito {
 	width: 40px;
 	height: 40px;
-	stroke: #000;
 }
 
 .icono-carrito:hover {
@@ -39,6 +38,7 @@
 	color: black;
 	width: 25px;
 	height: 25px;
+  cursor: pointer;
 
 	display: flex;
 	justify-content: center;
@@ -299,7 +299,7 @@
   border-radius: 10px;
   padding: .1rem;
   width: 40%;
-  font-size: 25px;
+  font-size: 17px;
   font-weight: bold;
   background-color: rgba(0, 0, 255, 0.500);
   color: whitesmoke;
@@ -345,4 +345,90 @@
 .container-producto:hover {
   transform: scale(1.1);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.formulario {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ margin-bottom: 30px;
+}
+
+.contenedor-formulario {
+  margin-bottom: 15px;
+}
+.etiqueta {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+.input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid yellow;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+}
+.checkbox {
+  margin-right: 10px;
+}
+.boton-ingresar {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: black;
+  border: 1px solid yellow;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.boton-ingresar:hover {
+  background-color: yellow;
+  color: #000;
+}
+
+
+
+.inicio-sesion{
+  width: 400px;
+}
+
+.titulo{
+  color: white;
+  text-align: center;
+}
+
+.boton-login{
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: black;
+  border: 1px solid orange;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+.input-login{
+width: 100%;
+background-color: white;
+border: 1px solid orange;
+margin-bottom: 7px;
+}
+.boton-login:hover {
+  background-color: orange;
+  color: #000;
+}
+
+.registro{
+  color: white;
 }

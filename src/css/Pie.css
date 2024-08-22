@@ -1,6 +1,6 @@
 .ancor-pie {
   text-decoration: none;
-  color: green;
+  color: white;
   font-weight: bold;
   transition: all 0.5s;
 
@@ -26,6 +26,7 @@
 
   .tit-enlaces {
     font-size: 1.5rem;
+    font-style: italic;
     cursor: default;
     color: white;
   }
